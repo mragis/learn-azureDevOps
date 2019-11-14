@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>Arana.Learn.AzureDevOps</RootNamespace>
+    <Company>Arana Software</Company>
+    <Authors>Arana Software</Authors>
+    <Product>Learn Azure DevOps</Product>
+    <Copyright>2019</Copyright>
+  </PropertyGroup>
+
+</Project>
