@@ -38,7 +38,7 @@ This workshop is not about building a new website in some various technology, bu
  3. Pipeline: Rename. Set Agent pool to `Hosted VS2017`
  4. Agent Job: Rename
  5. Create a variable `BuildConfiguration` set to `Release`
- 5. Add a `.NET Core` Task. Command: Publish.
+ 5. Add a `.NET Core` Task. Command: Restore.
  6. Add a `.NET Core` Task. Command: Build. Args: `--no-restore --configuration $(BuildConfiguration)`
  7. Save and Queue
 
@@ -110,5 +110,17 @@ A purely human element, this is a task that cannot be governed with automation.
  4. Enable Production pre-deployment After Stage trigger
  5. Modify Production job deploy task to use `workshop-prod`
  6. Save; trigger a build
+:ne
+
+## Managed
+
+With an understanding of Azure DevOps using the classic interface,
+rebuilding the pipelines in YAML allows the source repository to manage
+its own build configuration.
+
+### Step A.1: An Empty Pipeline
+
+
+
 
 
