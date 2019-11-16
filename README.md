@@ -46,7 +46,7 @@ This workshop is not about building a new website in some various technology, bu
 ### Step 3: Make the build self-testing
 
  1. Edit pipeline
- 2. Add a `.NET Core` Task. Command: Test. Path: `test/*.Tests/*.Tests.csproj` Arg: `--no-restore --no-build --configuration $(BuildConfiguration)`
+ 2. Add a `.NET Core` Task. Command: Test. Path: `*.tests/*.tests.csproj` Arg: `--no-restore --no-build --configuration $(BuildConfiguration)`
  3. Save and Queue
 
 
