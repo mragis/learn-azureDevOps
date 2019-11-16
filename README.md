@@ -132,8 +132,8 @@ its own build configuration.
 ### Step 13: Pipeline Jobs
 
  1. Edit pipeline
- 2. Wrap existing steps in a Job
- 3. Create a new Job with Publishing steps
+ 2. Wrap existing steps in a job
+ 3. Create Publishing steps within existing job
  4. Save
 
 ### Step 14: Pipeline Triggers
