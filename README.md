@@ -87,7 +87,7 @@ A purely human element, this is a task that cannot be governed with automation.
 
 ### Step 8: Make it easy to get the latest deliverables
 
- 1. Add a `.NET Core` Task. Command: Publish. Zip with Path. Path:` src/AspNetCoreSample.Web/AspNetCoreSample.Web.csproj` Arg: `--no-restore --no-build --configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)`
+ 1. Add a `.NET Core` Task. Command: Publish. Zip with Path. Publish Web Projects. Arg: ` --no-restore --no-build --configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)`
  2. Add a `Publish Build Artifacts` Task.
  3. Save and Queue
 
@@ -98,7 +98,7 @@ A purely human element, this is a task that cannot be governed with automation.
  2. Create a new Release Artifact from your Build Pipeline
  3. Enable the Artifact's Continuous Deployment Trigger
  4. Create a `Test` Stage. Enable the `After Release` Trigger
- 5. Create an `Azure App Service Deploy` task from your `AspNetCoreSample.Web.zip` package to your subscription's `workshop-dev` instance
+ 5. Create an `Azure App Service Deploy` task from your `learn-azureDevOps.zip` package to your subscription's `workshop-dev` instance
  6. Save; trigger a build
 
 
@@ -106,8 +106,8 @@ A purely human element, this is a task that cannot be governed with automation.
 
  1. Edit the Release pipeline
  2. Clone the Test stage; rename cloned stage to Production
- 3. Enable Test post-deployment approvals
- 4. Enable Production pre-deployment After Stage trigger
+ 3. Enable Production pre-deployment After Stage trigger
+ 4. Enable Production pre-deployment approvals
  5. Modify Production job deploy task to use `workshop-prod`
  6. Save; trigger a build
 :ne
@@ -125,7 +125,7 @@ its own build configuration.
 
 ### Step 12: Pipeline Steps
 
- 1. Add `DotNetCoreCLI@2` tasks for Restore, Build, & Publish
+ 1. Add `DotNetCoreCLI@2` tasks for Restore, Build, & Test
  2. Add `BuildConfiguration` queue variable
  3. Save
 
