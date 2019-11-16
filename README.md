@@ -158,7 +158,7 @@ its own build configuration.
  2. Configure Production for Pre-Stage Approvals
  3. Edit Pipeline
  4. Add Stage for Production Deployment
- 5. Add branch condition to Production Deployment stage
+ 5. Add branch condition to Production Deployment stage: `and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))`
  4. Save
 
 
