@@ -35,7 +35,7 @@ This workshop is not about building a new website in some various technology, bu
 
  1. Create a new pipeline
  2. Repository: GitHub with a Personal Access Token
- 3. Pipeline: Rename. Set Agent pool to `Hosted VS2017`
+ 3. Pipeline: Rename. Set Agent pool to `Azure Pipelines` and a specification of `ubuntu-16.04`
  4. Agent Job: Rename
  5. Create a variable `BuildConfiguration` set to `Release`
  5. Add a `.NET Core` Task. Command: Restore.
@@ -112,15 +112,53 @@ A purely human element, this is a task that cannot be governed with automation.
  6. Save; trigger a build
 :ne
 
-## Managed
+## Code Managed
 
 With an understanding of Azure DevOps using the classic interface,
 rebuilding the pipelines in YAML allows the source repository to manage
 its own build configuration.
 
-### Step A.1: An Empty Pipeline
+### Step 11: Pipelines
 
+ 1. Create an empty-pipeline file
+ 2. Connect the file to Azure DevOps
 
+### Step 12: Pipeline Steps
 
+ 1. Add `DotNetCoreCLI@2` tasks for Restore, Build, & Publish
+ 2. Add `BuildConfiguration` queue variable
+ 3. Save
+
+### Step 13: Pipeline Jobs
+
+ 1. Edit pipeline
+ 2. Wrap existing steps in a Job
+ 3. Create a new Job with Publishing steps
+ 4. Save
+
+### Step 14: Pipeline Triggers
+
+ 1. Edit pipeline
+ 2. Add a branch trigger to the pipeline
+ 3. Add a pr trigger to the pipeline
+ 4. Add a cron trigger to the pipeline
+ 5. Save
+
+### Step 15: Pipeline Deployments
+
+ 1. Enable Multi-Stage Feature
+ 2. Add a Service Connection to your Subscription
+ 3. Wrap all existing jobs in a Build Stage
+ 4. Add a new Deployment Stage, with a Deployment Job to Test
+ 5. Save
+
+### Step 16: Approvals and Conditions
+
+ 1. Add a Production environment
+ 2. Configure Production for Pre-Stage Approvals
+ 3. Edit Pipeline
+ 4. Add Stage for Production Deployment
+ 5. Add branch condition to Production Deployment stage
+ 4. Save
 
 
